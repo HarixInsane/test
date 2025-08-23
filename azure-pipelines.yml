@@ -20,7 +20,7 @@ steps:
 # Publish the compiled JAR file(s) as artifacts
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'my-java-app/my-java-app/target/*.jar'
+    PathtoPublish: 'my-java-app/target/*.jar'
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
