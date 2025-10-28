@@ -25,7 +25,10 @@ steps:
     publishLocation: 'Container'
 
 # Publish test results in Azure DevOps Test tab
-- task: PublishTestResults@2
+- task: Maven@4
   inputs:
+    mavenPomFile: 'my-java-app/pom.xml'
+    goals: 'package'
+    mavenVersionOption: 'Default'
+    publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    testRunTitle: 'JUnit Test Results'
