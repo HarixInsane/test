@@ -24,11 +24,3 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
-# Publish test results in Azure DevOps Test tab
-- task: Maven@4
-  inputs:
-    mavenPomFile: 'my-java-app/pom.xml'
-    goals: 'package'
-    mavenVersionOption: 'Default'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
